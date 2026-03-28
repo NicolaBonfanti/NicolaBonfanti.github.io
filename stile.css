@@ -1,86 +1,150 @@
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f4f7f6;
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f5f3ef;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 50px 20px;
-    color: #333;
+    align-items: flex-start;
+    padding: 60px 20px;
+    color: #1a1a1a;
 }
 
 .container {
     width: 100%;
-    max-width: 550px;
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    max-width: 560px;
 }
 
+/* ── Header ── */
 header {
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 48px;
+}
+
+.label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #b5a89a;
+    margin-bottom: 14px;
 }
 
 h1 {
-    margin: 0;
-    color: #2d3436;
-    font-size: 28px;
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(42px, 8vw, 64px);
+    line-height: 1.05;
+    color: #1a1a1a;
+    margin-bottom: 12px;
 }
 
 .subtitle {
-    color: #636e72;
     font-size: 0.9rem;
-    margin-top: 5px;
+    color: #8c7f74;
 }
 
+/* ── List ── */
 .project-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .project-item {
-    margin-bottom: 15px;
+    animation: fadeUp 0.4s ease both;
 }
 
+.project-item:nth-child(1) { animation-delay: 0.05s; }
+.project-item:nth-child(2) { animation-delay: 0.10s; }
+.project-item:nth-child(3) { animation-delay: 0.15s; }
+.project-item:nth-child(4) { animation-delay: 0.20s; }
+.project-item:nth-child(5) { animation-delay: 0.25s; }
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Link card ── */
 .project-link {
     display: flex;
     align-items: center;
+    gap: 20px;
     text-decoration: none;
-    color: #2d3436;
-    padding: 18px 25px;
+    color: inherit;
+    padding: 20px 24px;
+    border-radius: 14px;
     background: #fff;
-    border: 1px solid #edf2f7;
-    border-radius: 12px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    font-weight: 600;
-}
-
-.project-link::before {
-    counter-increment: list-counter;
-    content: counter(list-counter);
-    background: #f1f2f6;
-    color: #4f46e5;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-right: 15px;
-    font-size: 0.85rem;
+    border: 1.5px solid #ede9e3;
+    transition: background 0.22s ease, transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 }
 
 .project-link:hover {
-    background-color: #4f46e5;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-    border-color: #4f46e5;
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-.project-link:hover::before {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
+/* ── Number badge ── */
+.num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    color: #c9bfb5;
+    min-width: 36px;
+    line-height: 1;
+    transition: color 0.22s ease;
+}
+
+.project-link:hover .num {
+    color: #c9a96e;
+}
+
+/* ── Text block ── */
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: color 0.22s ease;
+}
+
+.project-link:hover .title {
+    color: #fff;
+}
+
+.tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a89e95;
+    transition: color 0.22s ease;
+}
+
+.project-link:hover .tag {
+    color: rgba(255,255,255,0.55);
+}
+
+/* ── Arrow ── */
+.arrow {
+    font-size: 1.1rem;
+    color: #ccc;
+    transition: color 0.22s ease, transform 0.22s ease;
+}
+
+.project-link:hover .arrow {
+    color: #c9a96e;
+    transform: translateX(4px);
 }
