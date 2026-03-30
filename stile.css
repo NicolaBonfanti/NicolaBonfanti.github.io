@@ -122,9 +122,6 @@ h2::before {
                 color 0.22s ease;
 }
 
-/* ────────────────────────────────────────────
-   ESERCIZIO 1 — :hover e :focus-visible sui link
-   ──────────────────────────────────────────── */
 
 /* Hover: cambia colore testo e aggiunge sottolineatura visibile */
 .project-link:hover {
@@ -203,9 +200,6 @@ h2::before {
     transform: translateX(4px);
 }
 
-/* ────────────────────────────────────────────
-   ESERCIZIO 2 — Pseudo-classi strutturali sulla lista competenze
-   ──────────────────────────────────────────── */
 
 .skills-list {
     list-style: none;
