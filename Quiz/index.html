@@ -1,80 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
     <head>
-
+        <meta charset="UTF-8">
+        <title>Esercitazione Javascript - Quiz</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        
-        <label>Cognome:</label>
-        <input type="text" id="textCognome">
-        <label>Nome:</label>
-        <input type="text" id="textNome">
-        <br>
-        <br>
-        <label>Giorno:</label>
-        <input type="text" id="textGiorno">
-        <label>Mese</label>
-        <select name="mesi" id="comboMese"></select>
-        <label>Anno</label>
-        <input type="text" id="textAnno">
-        <br>
-        <br>
-        <fieldset>
-            <legend>Domande</legend>
-            <label>Qual è il linguaggio di programmazione utilizzato per creare e modificare i database? (in maiuscolo)</label>
-            <br>
-            <input type="text" id="textRisposta1">
-            <br>
-            <br>
 
-            <label>Quanti valori può assumere una variabile booleana?</label>
-            <br>
-            <select name="bool" id="comboRisposta2">
-                <option>1</option>
-                <option>2</option>
-                <option>4</option>
-                <option>256</option>
-            </select>
-            <br>
-            <br>
+        <h1>Esercitazione Javascript - Quiz</h1>
 
-            <label >Quali sono le librerie caricate a run-time?</label>
-            <br>
-            <input type="radio" id="radioRisposta3.1">
-            <label >Statiche</label>
-            <br>
-            <input type="radio" id="radioRisposta3.2"> 
-            <label >Dinamiche</label>
-            <br>
-            <br>
+        <form id="quizForm">
 
-            <label>Quali tra queste sono le parole chiave in C++</label>
-            <br>
-            <input type="checkbox" id="checkRisposta4.1">
-            <label>void</label>
-            <br>
-            <input type="checkbox" id="checkRisposta4.2">
-            <label>interger</label>
-            <br>
-            <input type="checkbox" id="checkRisposta4.3">
-            <label>char</label>
-            <br>
-            <br>
+            <fieldset>
+                <legend>Dati anagrafici</legend>
+                <label>Cognome:</label>
+                <input type="text" id="textCognome">
+                <label>Nome:</label>
+                <input type="text" id="textNome">
+            </fieldset>
 
-            <label>8 bit corrispondono a un...</label>
-            <input type="text" id="textRisposta5">
-        </fieldset>
-        
-        <button onclick="elaboraDati()">Elabora</button>
-        <button onclick="cancellaDati()">Cancella</button>
-        <br>
-        <br>
+            <fieldset>
+                <legend>Data di nascita</legend>
+                <label>Giorno:</label>
+                <input type="text" id="textGiorno" maxlength="2" size="3">
+                <label>Mese</label>
+                <select name="mesi" id="comboMese"></select>
+                <label>Anno</label>
+                <input type="text" id="textAnno" maxlength="2" size="5">
+            </fieldset>
 
-        <fieldset>
-            <legend>Esito</legend>
-            <label >Punteggio:</label>
-            <input type="text" id="textPunteggio" readonly>
-        </fieldset>
+            <fieldset>
+                <legend>Domande</legend>
+
+                <label>Qual è il linguaggio di programmazione utilizzato per creare e modificare i database? (in maiuscolo)</label>
+                <br>
+                <input type="text" id="textRisposta1">
+                <br><br>
+
+                <label>Quanti valori può assumere una variabile booleana?</label>
+                <br>
+                <select name="bool" id="comboRisposta2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>4</option>
+                    <option>256</option>
+                </select>
+                <br><br>
+
+                <label>Quali sono le librerie caricate a run-time?</label>
+                <br>
+                <input type="radio" name="risposta3" id="radioRisposta3_1" value="Statiche">
+                <label for="radioRisposta3_1">Statiche</label>
+                <br>
+                <input type="radio" name="risposta3" id="radioRisposta3_2" value="Dinamiche">
+                <label for="radioRisposta3_2">Dinamiche</label>
+                <br><br>
+
+                <label>Quali tra queste sono le parole chiave in C++?</label>
+                <br>
+                <input type="checkbox" id="checkRisposta4_1" value="void">
+                <label for="checkRisposta4_1">void</label>
+                <br>
+                <input type="checkbox" id="checkRisposta4_2" value="integer">
+                <label for="checkRisposta4_2">integer</label>
+                <br>
+                <input type="checkbox" id="checkRisposta4_3" value="char">
+                <label for="checkRisposta4_3">char</label>
+                <br><br>
+
+                <label>8 bit corrispondono a un...</label>
+                <br>
+                <input type="text" id="textRisposta5">
+            </fieldset>
+
+            <div class="bottoni">
+                <button type="button" onclick="elaboraDati()">Elabora</button>
+                <button type="button" onclick="cancellaDati()">Cancella</button>
+                <button type="button" onclick="utenteConPunteggio()">Utente con punteggio</button>
+            </div>
+
+            <div class="esito-container">
+                <fieldset id="esitoBox">
+                    <legend>Esito</legend>
+                    <label>Punteggio:</label>
+                    <input type="text" id="textPunteggio" readonly>
+                </fieldset>
+                <fieldset id="utenteBox">
+                    <legend>Utente</legend>
+                    <label>Codice/Punti:</label>
+                    <input type="text" id="textCodice" size="40" readonly>
+                </fieldset>
+            </div>
+
+        </form>
 
         <script src="script.js"></script>
     </body>

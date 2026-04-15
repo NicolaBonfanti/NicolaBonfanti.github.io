@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    background-color: #fff;
+    border: 1px solid #999;
+    padding: 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    padding: 3px;
+}
+
+.domanda {
+    margin-bottom: 15px;
+}
+
+.bottoni {
+    margin-top: 10px;
+}
+
+button {
+    padding: 5px 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.esito-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#esitoBox, #utenteBox {
+    flex: 1;
+}
