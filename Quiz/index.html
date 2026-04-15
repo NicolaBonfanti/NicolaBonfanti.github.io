@@ -6,11 +6,76 @@
     <body>
         
         <label>Cognome:</label>
-        <input type="text" id="textBoxCognome">
+        <input type="text" id="textCognome">
         <label>Nome:</label>
-        <input type="text" id="textBoxNome">
+        <input type="text" id="textNome">
         <br>
-        
+        <br>
+        <label>Giorno:</label>
+        <input type="text" id="textGiorno">
+        <label>Mese</label>
+        <select name="mesi" id="comboMese"></select>
+        <label>Anno</label>
+        <input type="text" id="textAnno">
+        <br>
+        <br>
+        <fieldset>
+            <legend>Domande</legend>
+            <label>Qual è il linguaggio di programmazione utilizzato per creare e modificare i database? (in maiuscolo)</label>
+            <br>
+            <input type="text" id="textRisposta1">
+            <br>
+            <br>
 
+            <label>Quanti valori può assumere una variabile booleana?</label>
+            <br>
+            <select name="bool" id="comboRisposta2">
+                <option>1</option>
+                <option>2</option>
+                <option>4</option>
+                <option>256</option>
+            </select>
+            <br>
+            <br>
+
+            <label >Quali sono le librerie caricate a run-time?</label>
+            <br>
+            <input type="radio" id="radioRisposta3.1">
+            <label >Statiche</label>
+            <br>
+            <input type="radio" id="radioRisposta3.2"> 
+            <label >Dinamiche</label>
+            <br>
+            <br>
+
+            <label>Quali tra queste sono le parole chiave in C++</label>
+            <br>
+            <input type="checkbox" id="checkRisposta4.1">
+            <label>void</label>
+            <br>
+            <input type="checkbox" id="checkRisposta4.2">
+            <label>interger</label>
+            <br>
+            <input type="checkbox" id="checkRisposta4.3">
+            <label>char</label>
+            <br>
+            <br>
+
+            <label>8 bit corrispondono a un...</label>
+            <input type="text" id="textRisposta5">
+        </fieldset>
+        
+        <button onclick="elaboraDati()">Elabora</button>
+        <button onclick="cancellaDati()">Cancella</button>
+        <br>
+        <br>
+
+        <fieldset>
+            <legend>Esito</legend>
+            <label >Punteggio:</label>
+            <input type="text" id="textPunteggio" readonly>
+        </fieldset>
+
+        <script src="script.js"></script>
     </body>
 </html>
