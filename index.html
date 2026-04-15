@@ -9,7 +9,20 @@
 </head>
 <body>
 
-    <div class="container">
+    <!-- ── Menu bar ── -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="#top" class="brand">NB<span class="brand-dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#progetti">Progetti</a></li>
+                <li><a href="#competenze">Competenze</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="top">
         <header>
             <p class="label">Portfolio</p>
             <h1>I miei<br>Compiti</h1>
@@ -17,15 +30,16 @@
         </header>
 
         <!-- Sezione progetti — h2 necessario per Esercizio 3 -->
-        <section class="section">
+        <section class="section" id="progetti">
             <h2>Progetti</h2>
             <nav>
                 <ol class="project-list">
                     <li class="project-item">
-                        <a href="primoSito/index.html" class="project-link">
+                        <a href="primosito/index.html" class="project-link">
                             <span class="num">01</span>
                             <span class="info">
                                 <span class="title">Primo Sito Web</span>
+                                <span class="desc">Il mio primo sito HTML con pagine dedicate ai docenti.</span>
                                 <span class="tag">HTML</span>
                             </span>
                             <span class="arrow">→</span>
@@ -36,6 +50,7 @@
                             <span class="num">02</span>
                             <span class="info">
                                 <span class="title">Esercizio CSS — Mantova</span>
+                                <span class="desc">Pagina dedicata alla città di Mantova con esercizi di stile CSS.</span>
                                 <span class="tag">CSS</span>
                             </span>
                             <span class="arrow">→</span>
@@ -46,17 +61,19 @@
                             <span class="num">03</span>
                             <span class="info">
                                 <span class="title">Il Mondo Animale</span>
+                                <span class="desc">Galleria di immagini e curiosità sulle specie animali più affascinanti.</span>
                                 <span class="tag">HTML · CSS</span>
                             </span>
                             <span class="arrow">→</span>
                         </a>
                     </li>
                     <li class="project-item">
-                        <a href="TavolaPitagorica/index.html" class="project-link">
+                        <a href="TavolaPitagorica/TavolaPitagorica/index.html" class="project-link">
                             <span class="num">04</span>
                             <span class="info">
                                 <span class="title">Tavola Pitagorica</span>
-                                <span class="tag">HTML · CSS</span>
+                                <span class="desc">Tavola pitagorica generata dinamicamente con JavaScript.</span>
+                                <span class="tag">HTML · CSS · JS</span>
                             </span>
                             <span class="arrow">→</span>
                         </a>
@@ -66,7 +83,63 @@
                             <span class="num">05</span>
                             <span class="info">
                                 <span class="title">Esercizio JavaScript 1</span>
+                                <span class="desc">Primo esercizio JS: lampadina interattiva che si accende e si spegne.</span>
                                 <span class="tag">JS</span>
+                            </span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </li>
+                    <li class="project-item">
+                        <a href="paragrafiAScomparsa/index.html" class="project-link">
+                            <span class="num">06</span>
+                            <span class="info">
+                                <span class="title">Paragrafi a Scomparsa</span>
+                                <span class="desc">Guida ai fondamenti del web con contenuti espandibili al click.</span>
+                                <span class="tag">JS · DOM</span>
+                            </span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </li>
+                    <li class="project-item">
+                        <a href="formRegistrazione/index.html" class="project-link">
+                            <span class="num">07</span>
+                            <span class="info">
+                                <span class="title">Form Registrazione</span>
+                                <span class="desc">Form di registrazione utente con validazione e select dinamiche.</span>
+                                <span class="tag">JS · Form</span>
+                            </span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </li>
+                    <li class="project-item">
+                        <a href="EsempiImput/index.html" class="project-link">
+                            <span class="num">08</span>
+                            <span class="info">
+                                <span class="title">Esempi Input</span>
+                                <span class="desc">Esempi di checkbox, radio button e select gestiti via JavaScript.</span>
+                                <span class="tag">JS · Form</span>
+                            </span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </li>
+                    <li class="project-item">
+                        <a href="Quiz/index.html" class="project-link">
+                            <span class="num">09</span>
+                            <span class="info">
+                                <span class="title">Quiz JavaScript</span>
+                                <span class="desc">Quiz interattivo con dati anagrafici e gestione delle risposte.</span>
+                                <span class="tag">JS · Quiz</span>
+                            </span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </li>
+                    <li class="project-item">
+                        <a href="pagine/pagina1.html" class="project-link">
+                            <span class="num">10</span>
+                            <span class="info">
+                                <span class="title">Pagine di prova</span>
+                                <span class="desc">Piccoli esercizi di struttura HTML e navigazione tra pagine.</span>
+                                <span class="tag">HTML</span>
                             </span>
                             <span class="arrow">→</span>
                         </a>
@@ -76,7 +149,7 @@
         </section>
 
         <!-- Sezione competenze — lista necessaria per Esercizio 2 -->
-        <section class="section">
+        <section class="section" id="competenze">
             <h2>Competenze</h2>
             <ul class="skills-list">
                 <li>HTML5 — Struttura semantica</li>
@@ -87,7 +160,59 @@
             </ul>
         </section>
 
+        <!-- Sezione FAQ -->
+        <section class="section" id="faq">
+            <h2>FAQ</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Cos'è questo sito?</summary>
+                    <p>È il mio portfolio personale, dove raccolgo gli esercizi e i progetti realizzati durante il percorso di studi in Informatica.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Quali tecnologie utilizzi?</summary>
+                    <p>Principalmente HTML5, CSS3 e JavaScript. Sto imparando anche il design responsive e le best practice di accessibilità.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Posso usare il codice dei progetti?</summary>
+                    <p>Sì, tutti i progetti sono pubblici su GitHub e possono essere usati come riferimento didattico.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Come posso contattarti?</summary>
+                    <p>Puoi trovarmi tramite i link nella sezione Contatti qui sotto.</p>
+                </details>
+            </div>
+        </section>
+
     </div>
+
+    <!-- ── Footer ── -->
+    <footer class="site-footer" id="contatti">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <p class="footer-title">Nicola Bonfanti</p>
+                <p class="footer-text">Studente di Informatica — 4ªC</p>
+                <p class="footer-text">Portfolio di esercitazioni HTML, CSS e JavaScript.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-title">Link</p>
+                <ul class="footer-links">
+                    <li><a href="#progetti">Progetti</a></li>
+                    <li><a href="#competenze">Competenze</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p class="footer-title">Contatti</p>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/NicolaBonfanti" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="mailto:nicola@example.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025/2026 Nicola Bonfanti — Tutti i diritti riservati.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

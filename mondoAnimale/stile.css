@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -8,22 +12,32 @@ body {
 .header {
     background-color: #2d7a77;
     color: white;
-    padding: 40px;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    margin: 0 0 10px;
 }
 
 .galleria {
     padding: 20px;
 }
 
+/* FIX MOBILE: flex-wrap + larghezza fluida */
 .immagini {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
 }
 
 .immagini img {
-    width: 200px;
-    height: 150px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -35,7 +49,7 @@ body {
 }
 
 .azioni {
-    padding: 30px;
+    padding: 30px 20px;
 }
 
 .btn {
@@ -43,7 +57,10 @@ body {
     color: white;
     padding: 10px 20px;
     margin: 5px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95rem;
 }
 
 .btn:hover {
@@ -55,4 +72,37 @@ body {
     color: white;
     padding: 20px;
     margin-top: 40px;
+}
+
+/* ── Breakpoint mobile: stack verticale pulito ── */
+@media (max-width: 600px) {
+    .header {
+        padding: 28px 16px;
+    }
+
+    .immagini {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .immagini img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .liste {
+        padding: 16px;
+    }
+
+    .azioni {
+        padding: 24px 16px;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        margin: 8px auto;
+    }
 }

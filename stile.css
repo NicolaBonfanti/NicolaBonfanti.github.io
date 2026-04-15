@@ -4,20 +4,81 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body {
     font-family: 'DM Sans', sans-serif;
     background-color: #f5f3ef;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 60px 20px;
     color: #1a1a1a;
+    padding-top: 72px; /* spazio per la navbar fissa */
 }
 
+/* ────────────────────────────────────────────
+   NAVBAR
+   ──────────────────────────────────────────── */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(245, 243, 239, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ede9e3;
+    z-index: 100;
+}
+
+.navbar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+.brand-dot {
+    color: #c9a96e;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6b5e55;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #c9a96e;
+}
+
+/* ────────────────────────────────────────────
+   CONTAINER
+   ──────────────────────────────────────────── */
 .container {
     width: 100%;
-    max-width: 560px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 24px;
 }
 
 /* ── Header ── */
@@ -49,7 +110,7 @@ h1 {
 
 /* ── Sections ── */
 .section {
-    margin-bottom: 48px;
+    margin-bottom: 56px;
 }
 
 /* ────────────────────────────────────────────
@@ -58,9 +119,9 @@ h1 {
 
 h2 {
     font-family: 'DM Serif Display', serif;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: #1a1a1a;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     display: flex;
     align-items: center;
 }
@@ -71,7 +132,7 @@ h2::before {
     display: inline-block;
     width: 4px;
     height: 1em;
-    background-color: #c9a96e;   /* dorato — coerente con la palette */
+    background-color: #c9a96e;
     border-radius: 2px;
     margin-right: 0.6rem;
     flex-shrink: 0;
@@ -79,16 +140,18 @@ h2::before {
 
 /* Selezione del testo personalizzata */
 ::selection {
-    background-color: #c9a96e;   /* sfondo dorato */
-    color: #1a1a1a;              /* testo scuro: contrasto adeguato */
+    background-color: #c9a96e;
+    color: #1a1a1a;
 }
 
-/* ── List ── */
+/* ────────────────────────────────────────────
+   LISTA PROGETTI — 2 colonne fisse su desktop
+   ──────────────────────────────────────────── */
 .project-list {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
 }
 
 .project-item {
@@ -100,6 +163,11 @@ h2::before {
 .project-item:nth-child(3) { animation-delay: 0.15s; }
 .project-item:nth-child(4) { animation-delay: 0.20s; }
 .project-item:nth-child(5) { animation-delay: 0.25s; }
+.project-item:nth-child(6) { animation-delay: 0.30s; }
+.project-item:nth-child(7) { animation-delay: 0.35s; }
+.project-item:nth-child(8) { animation-delay: 0.40s; }
+.project-item:nth-child(9) { animation-delay: 0.45s; }
+.project-item:nth-child(10) { animation-delay: 0.50s; }
 
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(12px); }
@@ -109,19 +177,19 @@ h2::before {
 /* ── Link card ── */
 .project-link {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 18px;
     text-decoration: none;
     color: inherit;
-    padding: 20px 24px;
+    padding: 22px 24px;
     border-radius: 14px;
     background: #fff;
     border: 1.5px solid #ede9e3;
+    height: 100%;
     transition: background 0.22s ease, transform 0.22s ease,
                 border-color 0.22s ease, box-shadow 0.22s ease,
                 color 0.22s ease;
 }
-
 
 /* Hover: cambia colore testo e aggiunge sottolineatura visibile */
 .project-link:hover {
@@ -139,7 +207,7 @@ h2::before {
 .project-link:focus-visible {
     outline: 2px solid #c9a96e;
     outline-offset: 3px;
-    border-radius: 14px;   /* angoli leggermente arrotondati */
+    border-radius: 14px;
 }
 
 /* ── Number badge ── */
@@ -160,12 +228,12 @@ h2::before {
 .info {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
     flex: 1;
 }
 
 .title {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #1a1a1a;
     transition: color 0.22s ease;
@@ -175,12 +243,24 @@ h2::before {
     color: #fff;
 }
 
+.desc {
+    font-size: 0.82rem;
+    color: #8c7f74;
+    line-height: 1.45;
+    transition: color 0.22s ease;
+}
+
+.project-link:hover .desc {
+    color: rgba(255, 255, 255, 0.75);
+}
+
 .tag {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #a89e95;
+    margin-top: 2px;
     transition: color 0.22s ease;
 }
 
@@ -192,6 +272,7 @@ h2::before {
 .arrow {
     font-size: 1.1rem;
     color: #ccc;
+    align-self: center;
     transition: color 0.22s ease, transform 0.22s ease;
 }
 
@@ -200,20 +281,21 @@ h2::before {
     transform: translateX(4px);
 }
 
-
+/* ────────────────────────────────────────────
+   COMPETENZE
+   ──────────────────────────────────────────── */
 .skills-list {
     list-style: none;
     padding: 0;
+    max-width: 560px;
 }
 
-/* Tutti i li tranne l'ultimo: bordo inferiore + margine */
 .skills-list li:not(:last-child) {
     border-bottom: 1px solid #ede9e3;
     margin-bottom: 12px;
     padding-bottom: 12px;
 }
 
-/* Stile base di tutti gli elementi */
 .skills-list li {
     font-size: 0.92rem;
     color: #6b5e55;
@@ -221,8 +303,170 @@ h2::before {
     transition: color 0.2s ease;
 }
 
-/* Primo elemento: colore più accentuato — competenza principale */
 .skills-list li:first-child {
     color: #1a1a1a;
     font-weight: 600;
+}
+
+/* ────────────────────────────────────────────
+   FAQ
+   ──────────────────────────────────────────── */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 760px;
+}
+
+.faq-item {
+    background: #fff;
+    border: 1.5px solid #ede9e3;
+    border-radius: 12px;
+    padding: 16px 20px;
+    transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.faq-item[open] {
+    border-color: #c9a96e;
+    box-shadow: 0 4px 16px rgba(201, 169, 110, 0.08);
+}
+
+.faq-item summary {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.3rem;
+    color: #c9a96e;
+    font-weight: 300;
+    transition: transform 0.22s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-item p {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #6b5e55;
+    line-height: 1.6;
+}
+
+/* ────────────────────────────────────────────
+   FOOTER
+   ──────────────────────────────────────────── */
+.site-footer {
+    background-color: #1a1a1a;
+    color: #e8e3dc;
+    padding: 56px 24px 24px;
+    margin-top: 80px;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #3a3632;
+}
+
+.footer-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 14px;
+}
+
+.footer-text {
+    font-size: 0.88rem;
+    color: #b5a89a;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    color: #b5a89a;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #c9a96e;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 24px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #8c7f74;
+}
+
+/* ────────────────────────────────────────────
+   RESPONSIVE — mobile first fixes
+   ──────────────────────────────────────────── */
+@media (max-width: 720px) {
+    body {
+        padding-top: 64px;
+    }
+
+    .navbar-inner {
+        padding: 14px 18px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 0.82rem;
+    }
+
+    .container {
+        padding: 40px 20px;
+    }
+
+    /* Su mobile torna a 1 colonna */
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 420px) {
+    .nav-links {
+        gap: 14px;
+    }
+
+    .brand {
+        font-size: 1.3rem;
+    }
 }
