@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Ordine</title>
+</head>
+<body>
+    <h2>Esercizio Invio Di Un Ordine</h2>
+    <table border="3px" solid>
+        <thead>
+         <tr>
+            <th>Q.ta</th>
+            <th>Descrizione</th>
+            <th>Costo Unitario</th>
+            <th>Totale</th>
+         </tr>
+        </thead> 
+         <tr>
+            <td><input type="number" id="Q1" value="0"></td>
+            <td>mouse</td>
+            <td>16$</td>
+            <td id="tot1">0</td>
+         </tr>
+         <tr>
+            <td><input type="number" id="Q2" value="0"></td>
+            <td>tastiera 105 tasti</td>
+            <td>25$</td>
+            <td id="tot2">0</td>
+         </tr>
+         <tr>
+            <td><input type="number" id="Q3" value="0"></td>
+            <td>stampante deskjet colori</td>
+            <td>350$</td>
+            <td id="tot3">0</td>
+         </tr>
+         <tr>
+            <td><input type="number" id="Q4" value="0"></td>
+            <td>scanner A4 colori</td>
+            <td>200$</td>
+            <td id="tot4">0</td>
+         </tr>
+         <tr>
+            <td></td>
+            <td></td>
+            <td><button onclick="Totale()">TOTALE ORDINI -></button></td>
+            <td id="totFin">0</td>
+         </tr>
+    </table>
+    <br>
+    <br>
+    <label>Desidero ricevere notifiche </label>
+    <input type="radio" id="radio1" name="ciao"><label>Si</label>
+    <input type="radio" id="radio2" name="ciao" checked><label>No</label>
+    <br>
+    <br>
+    <label>E-mail: </label>
+    <input type="email" id="txtEmail">
+    <br>
+    <br>
+    <label>Pagamento: </label>
+    <select id="combo1"></select>
+    <br>
+    <br>
+    <button onclick="inviaOrdine()" id="buttonFinale">INVIA ORDINE</button>
+    <br>
+    <br>
+    <a href="https://NicolaBonfanti.github.io/index.html">← Torna alla Home</a>
+      <script src="script.js"></script>
+</body>
+</html>
