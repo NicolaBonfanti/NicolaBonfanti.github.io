@@ -1,14 +1,19 @@
-.dispari {
-	background-color: red;
+/* Stili specifici — Tavola Pitagorica */
+
+table {
+    border-collapse: collapse;
+    margin: 24px auto;
 }
 
 td {
-	height: 50px;
-	width: 50px;
-	border: 1px solid black;
-	text-align: center;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
-table {
-	border-collapse: collapse;
+.dispari {
+    background-color: #f0ece6;
+    color: #1a1a1a;
 }

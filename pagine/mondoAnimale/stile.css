@@ -1,30 +1,25 @@
-* {
-    box-sizing: border-box;
-}
+/* Stili specifici — Mondo Animale */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
+.header {
+    background-color: #1a1a1a;
+    color: #e8e3dc;
+    padding: 36px 32px;
+    border-radius: 12px;
+    margin-bottom: 32px;
     text-align: center;
 }
 
-.header {
-    background-color: #2d7a77;
-    color: white;
-    padding: 40px 20px;
-}
-
 .header h1 {
+    font-family: 'DM Serif Display', serif;
     font-size: clamp(1.6rem, 5vw, 2.4rem);
-    margin: 0 0 10px;
+    color: #e8e3dc;
+    margin: 0 0 8px;
 }
 
 .galleria {
-    padding: 20px;
+    padding: 20px 0;
 }
 
-/* FIX MOBILE: flex-wrap + larghezza fluida */
 .immagini {
     display: flex;
     flex-wrap: wrap;
@@ -38,65 +33,28 @@ body {
     height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 .liste {
-    padding: 20px;
     max-width: 600px;
     margin: 0 auto;
     text-align: left;
+    padding: 16px 0;
 }
 
 .azioni {
-    padding: 30px 20px;
+    padding: 24px 0;
+    text-align: center;
 }
 
-.btn {
-    background-color: #2d7a77;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.95rem;
-}
-
-.btn:hover {
-    background-color: #1e5250;
-}
-
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-/* ── Breakpoint mobile: stack verticale pulito ── */
 @media (max-width: 600px) {
-    .header {
-        padding: 28px 16px;
-    }
-
     .immagini {
         flex-direction: column;
         align-items: center;
-        gap: 12px;
     }
 
     .immagini img {
         max-width: 100%;
-        width: 100%;
-    }
-
-    .liste {
-        padding: 16px;
-    }
-
-    .azioni {
-        padding: 24px 16px;
     }
 
     .btn {

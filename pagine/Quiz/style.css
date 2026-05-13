@@ -1,53 +1,28 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
-}
-
-h1 {
-    text-align: center;
-}
-
-fieldset {
-    margin-bottom: 15px;
-    background-color: #fff;
-    border: 1px solid #999;
-    padding: 10px;
-}
-
-legend {
-    font-weight: bold;
-}
-
-label {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-input[type="text"] {
-    padding: 3px;
-}
+/* Stili specifici — Quiz */
 
 .domanda {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .bottoni {
-    margin-top: 10px;
-}
-
-button {
-    padding: 5px 15px;
-    margin-right: 5px;
-    cursor: pointer;
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 .esito-container {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     align-items: flex-start;
+    margin-top: 24px;
 }
 
-#esitoBox, #utenteBox {
+#esitoBox,
+#utenteBox {
     flex: 1;
+    background: #faf9f7;
+    border: 1.5px solid #ede9e3;
+    border-radius: 10px;
+    padding: 16px;
 }

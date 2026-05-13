@@ -480,3 +480,344 @@ h2::before {
         font-size: 1.3rem;
     }
 }
+
+/* ────────────────────────────────────────────
+   STILI UNIFORMI PER LE PAGINE PROGETTO
+   ──────────────────────────────────────────── */
+
+/* ── Contenitore pagina generica ── */
+.pagina,
+main,
+.main-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px 32px;
+    background: #fff;
+    border-radius: 16px;
+    border: 1.5px solid #ede9e3;
+}
+
+/* ── Header di sezione (mantova, mondoAnimale, ecc.) ── */
+header:not(.site-header) {
+    background-color: #1a1a1a;
+    color: #e8e3dc;
+    padding: 36px 32px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+}
+
+header:not(.site-header) h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    color: #e8e3dc;
+    margin-bottom: 0;
+}
+
+header:not(.site-header) nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+    padding: 0;
+    background: none;
+}
+
+header:not(.site-header) nav ul li a {
+    color: #c9a96e;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+header:not(.site-header) nav ul li a:hover {
+    color: #fff;
+}
+
+/* ── Titoli nelle pagine progetto ── */
+h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    margin-top: 24px;
+}
+
+h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #6b5e55;
+    margin-bottom: 8px;
+}
+
+/* ── Paragrafi nelle pagine progetto ── */
+p {
+    font-size: 0.93rem;
+    color: #4a3f38;
+    line-height: 1.65;
+    margin-bottom: 12px;
+}
+
+/* ── Link generici nelle pagine progetto ── */
+a {
+    color: #c9a96e;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ── Bottoni ── */
+button,
+input[type="button"],
+input[type="submit"],
+.btn-torna {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.btn-torna:hover {
+    background-color: #c9a96e;
+    color: #1a1a1a;
+    transform: translateY(-1px);
+}
+
+/* ── Form: input, select, textarea ── */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    background-color: #faf9f7;
+    border: 1.5px solid #ede9e3;
+    border-radius: 8px;
+    padding: 9px 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    width: auto;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #c9a96e;
+    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+}
+
+label {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #6b5e55;
+    margin-right: 6px;
+}
+
+/* ── Fieldset e legend (Quiz) ── */
+fieldset {
+    border: 1.5px solid #ede9e3;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+    background: #faf9f7;
+}
+
+legend {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    padding: 0 8px;
+}
+
+/* ── Tabelle ── */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+}
+
+table th {
+    background-color: #1a1a1a;
+    color: #e8e3dc;
+    padding: 12px 14px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+}
+
+table td {
+    padding: 11px 14px;
+    text-align: center;
+    border-bottom: 1px solid #ede9e3;
+    color: #4a3f38;
+}
+
+table tr:hover td {
+    background-color: #faf9f7;
+}
+
+/* Prima colonna intestazione riga */
+table th:first-child,
+table td:first-child {
+    text-align: left;
+}
+
+/* ── Sezioni accordion (paragrafiAScomparsa) ── */
+.sezione {
+    background: #fff;
+    border: 1.5px solid #ede9e3;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.titolo {
+    padding: 16px 20px;
+    background: #faf9f7;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    border-radius: 12px;
+    transition: background 0.2s;
+}
+
+.titolo:hover {
+    background: #f0ece6;
+}
+
+.contenuto {
+    display: none;
+    padding: 16px 20px;
+    font-size: 0.9rem;
+    color: #6b5e55;
+    line-height: 1.65;
+}
+
+.contenuto.visible {
+    display: block;
+}
+
+/* ── Classi colore tavola pitagorica ── */
+.dispari {
+    background-color: #f0ece6;
+    color: #1a1a1a;
+}
+
+/* ── Schede docenti (primosito) ── */
+.pagina-prof {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1.5px solid #ede9e3;
+    text-align: center;
+    max-width: 380px;
+    margin: 60px auto;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+.pagina-prof h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.materia {
+    color: #c9a96e;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.btn-torna {
+    margin-top: 24px;
+}
+
+/* ── Orario / primosito ── */
+.pagina {
+    padding-top: 24px;
+}
+
+/* ── Galleria immagini (mondoAnimale) ── */
+.immagini img {
+    border-radius: 10px;
+    border: 1.5px solid #ede9e3;
+}
+
+/* ── Bottoni azioni (mondoAnimale) ── */
+.btn {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 10px 22px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+    background-color: #c9a96e;
+    color: #1a1a1a;
+    transform: translateY(-1px);
+}
+
+/* ── Link "Torna alla Home" nel footer-bottom ── */
+.footer-bottom a {
+    color: #c9a96e;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+/* ── Responsive pagine progetto ── */
+@media (max-width: 720px) {
+    .pagina,
+    main,
+    .main-content {
+        margin: 20px 12px;
+        padding: 24px 18px;
+    }
+
+    header:not(.site-header) {
+        padding: 24px 18px;
+    }
+
+    .pagina-prof {
+        margin: 32px 16px;
+        width: auto;
+    }
+}
